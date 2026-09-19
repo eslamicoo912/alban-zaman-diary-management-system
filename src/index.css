@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Cairo', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  [dir="rtl"] body,
+  [dir="rtl"] button,
+  [dir="rtl"] input,
+  [dir="rtl"] select,
+  [dir="rtl"] textarea {
+    font-family: 'Cairo', 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+/* Mobile & tablet: prevent wide tables from breaking the layout —
+   make them horizontally scrollable inside their cards instead. */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    border-collapse: separate;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt, #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+    margin: 0;
+    padding: 10px;
+    background: white;
+    color: black;
+  }
+  /* Orders module: print a clean receipt when the detail view is open */
+  body:has(.printable-only) * {
+    visibility: hidden;
+  }
+  body:has(.printable-only) .printable-only,
+  body:has(.printable-only) .printable-only * {
+    visibility: visible;
+  }
+  body:has(.printable-only) .printable-only {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm;
+    margin: 0;
+    padding: 10px;
+    background: white;
+    color: black;
+  }
+}

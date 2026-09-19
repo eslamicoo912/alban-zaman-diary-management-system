@@ -1,0 +1,7 @@
+{
+  "name": "alban zaman Dairy",
+  "description": "alban zaman Dairy - Fast, modern retail POS and inventory management system tailored for fresh dairy products with bilingual Arabic/English support, cashier shift reconciliation, expiry tracking, and financial analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
