@@ -12,6 +12,8 @@
     "start": "tsx server/index.ts",
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
+    "db:clean": "tsx scripts/clear_db.ts",
+    "db:inspect": "tsx scripts/inspect_db.ts",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
